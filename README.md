@@ -1,2 +1,1 @@
-user ecaterina
-pass serban
+

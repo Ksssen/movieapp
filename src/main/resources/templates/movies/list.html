@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Lista Filmelor</title>
+</head>
+<body>
+<h1>Lista Filmelor</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Titlu</th>
+        <th>Actor</th>
+        <th>Director</th>
+        <th>Gen</th>
+        <th>Nota</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="movie : ${page.content}">
+        <td th:text="${movies.Title}">Titlu</td>
+        <td th:text="${movies.Actor}">Actor</td>
+        <td th:text="${movies.Director}">Director</td>
+        <td th:text="${movies.Genre}">Gen</td>
+        <td th:text="${movies.Review}">Nota</td>
+        <td>
+            <a th:href="@{/movies/{id}(id=${movie.id})}">Vizualizeaza</a>
+            <a th:href="@{/movies/{id}/edit(id=${movie.id})}">Editeaza</a>
+            <form th:action="@{/movies/{id}/delete(id=${movie.id})}" method="post">
+                <button type="submit">Sterge</button>
+            </form>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div>
+    <span th:text="'Pagina ' + ${page.number + 1} + ' din ' + ${page.totalPages}">Pagina</span>
+</div>
+</body>
+</html>

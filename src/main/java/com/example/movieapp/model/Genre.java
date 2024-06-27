@@ -16,5 +16,4 @@ public class Genre {
     @ManyToMany(mappedBy = "genres")
     private Set<Movie> movies;
 
-    // Getteri și setteri
 }

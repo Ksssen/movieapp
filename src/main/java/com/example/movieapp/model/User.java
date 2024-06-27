@@ -15,5 +15,4 @@ public class User {
     @OneToMany(mappedBy = "user")
     private List<Review> reviews;
 
-    // Getteri și setteri
 }

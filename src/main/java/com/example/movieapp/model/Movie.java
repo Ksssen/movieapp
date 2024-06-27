@@ -30,5 +30,4 @@ public class Movie {
             inverseJoinColumns = @JoinColumn(name = "actor_id"))
     private Set<Actor> actors;
 
-    // Getters and setters
 }

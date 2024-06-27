@@ -16,5 +16,4 @@ public class Actor {
     @ManyToMany(mappedBy = "actors")
     private Set<Movie> movies;
 
-    // Getteri și setteri
 }

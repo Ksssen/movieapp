@@ -16,5 +16,4 @@ public class Director {
     @OneToMany(mappedBy = "director")
     private List<Movie> movies;
 
-    // Getteri și setteri
 }

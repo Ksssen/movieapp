@@ -17,6 +17,5 @@ public class Review {
     @JoinColumn(name = "user_id")
     private User user;
 
-    // Getteri și setteri
 }
 

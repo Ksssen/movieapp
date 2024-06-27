@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>View Movie</title>
+</head>
+<body>
+<h1>View Movie</h1>
+<p>
+    <strong>Movie Name:</strong> <span th:text="${movie.movieName}">Movie Name</span>
+</p>
+<p>
+    <strong>Actor:</strong> <span th:text="${movie.actor}">Actor</span>
+</p>
+<p>
+    <strong>Director:</strong> <span th:text="${movie.director}">Director</span>
+</p>
+<p>
+    <strong>Genre:</strong> <span th:text="${movie.genre}">Genre</span>
+</p>
+<p>
+    <strong>Review:</strong> <span th:text="${movie.review}">Review</span>
+</p>
+<a href="/movies">Back to List</a>
+</body>
+</html>
